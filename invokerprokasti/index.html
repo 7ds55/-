@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тренировка Прокастов Инвокера</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="hints">
+            <h2>Подсказки по прокастам</h2>
+            <ul id="hintList">
+                <!-- Подсказки будут добавлены динамически с помощью JavaScript -->
+            </ul>
+        </aside>
+
+        <main class="content">
+            <header>
+                <h1>Тренировка Прокастов Инвокера</h1>
+                <p>Этот сайт создан для киберспортивного игрока Олега Еманoffa и его тренировок. Здесь вы можете отточить свои навыки в использовании комбо Инвокера.</p>
+            </header>
+
+            <section class="game">
+                <div id="currentCombo">Следующая комбинация: <span id="comboText"></span></div>
+                <div id="result"></div>
+                <button onclick="startTraining()">Начать тренировку</button>
+                <div id="keyButtons">
+                    <button data-key="q">Q</button>
+                    <button data-key="w">W</button>
+                    <button data-key="e">E</button>
+                    <button data-key="r">R</button>
+                </div>
+                <div id="userSequence"></div>
+            </section>
+
+            <footer>
+                <p>&copy; 2023 Киберспортивный клуб Олега Еманoffa. Все права защищены.</p>
+            </footer>
+        </main>
+
+        <aside class="timer">
+            <h2>Выберите таймер</h2>
+            <button onclick="setTimer(60)">1 минута</button>
+            <button onclick="setTimer(30)">30 секунд</button>
+            <button onclick="setTimer(10)">10 секунд</button>
+            <button onclick="setTimer(0)">Без таймера</button>
+            <button id="startButton" onclick="startTimer()">Старт</button>
+            <div id="timerDisplay">00:00</div>
+        </aside>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
